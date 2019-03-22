@@ -23,6 +23,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
 app.listen(process.env.PORT || 5000, () => {
   console.log(
     `Now listening for requests on port ${process.env.PORT || 5000}.`
