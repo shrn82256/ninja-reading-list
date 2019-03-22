@@ -23,6 +23,8 @@ app.use(
   })
 );
 
-app.listen(4000, () => {
-  console.log("Now listening for requests on port 4000.");
+app.listen(process.env.PORT || 5000, () => {
+  console.log(
+    `Now listening for requests on port ${process.env.PORT || 5000}.`
+  );
 });

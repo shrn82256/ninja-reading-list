@@ -8,7 +8,9 @@ import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
 
 const client = new ApolloClient({
-  link: new HttpLink({ uri: "/graphql" }),
+  link: new HttpLink({
+    uri: `http://localhost:${process.env.PORT || 5000}/graphql`
+  }),
   cache: new InMemoryCache()
 });
 
