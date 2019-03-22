@@ -9,7 +9,7 @@ import AddBook from "./components/AddBook";
 
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: `http://localhost:${process.env.PORT || 5000}/graphql`
+    uri: `/graphql`
   }),
   cache: new InMemoryCache()
 });
